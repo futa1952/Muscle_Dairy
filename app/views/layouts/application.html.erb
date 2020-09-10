@@ -13,21 +13,28 @@
 <body>
   <header>
     <div class="header_bar row">
-      <h1 class="col-xs-6">Muscle_Dairy</h1>
+      <h1 class="col-xs-7">
+        <%= link_to "Muscle_Dairy", root_path %>
+      </h1>
       <% if user_signed_in? %>
-      <div class="user_nav col-xs-6">
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <div class="user_nav col-xs-6 header-content">
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn header-right" %>
       </div>
       <% else %>
-      <div class="col-xs-6">
-        <%= link_to "ログイン", new_user_session_path %>
-        <%= link_to "新規登録", new_user_registration_path %>
+      <div class="col-xs-5 header-content">
+        <div><%= link_to "Top", homes_top_path, class: "btn btn-default navbar-btn header-right" %></div>
+        <div><%= link_to "About", homes_about_path, class: "btn btn-default navbar-btn header-right" %></div>
+        <div> <%= link_to "ログイン", new_user_session_path, class: "btn btn-default navbar-btn header-right" %></div>
+        <div> <%= link_to "新規登録", new_user_registration_path, class: "btn btn-default navbar-btn header-right" %></div>
       </div>
       <% end %>
   </header>
   <div class="container">
     <%= yield %>
   </div>
+  <footer>
+    <p>(c)copy right</p>
+  </footer>
 </body>
 
 </html>
