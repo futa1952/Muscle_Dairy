@@ -2,12 +2,22 @@
   <div class="user-page">
     <div class="col-xs-8 col-xs-offset-2">
       <div class="user-page__content">
+        <h1 class="user-page__title">マイページ</h1>
         <h3 class="profile-name"><%= @user.name %></h3>
         <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', class: "img-circle pull-left profile-img" %>
         <% if @user.id == current_user.id %>
         <p><%= link_to "プロフィール編集", edit_user_path(@user), class: "pull-right" %></p>
         <% end %>
-        <%= paginate @post_images %>
+        <table class="table-content row table table-bordered">
+          <tr>
+            <th>氏名</th>
+            <td><%= @user.name %></td>
+          </tr>
+          <tr>
+            <th>メールアドレス</th>
+            <td><%= @user.email %></td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>
