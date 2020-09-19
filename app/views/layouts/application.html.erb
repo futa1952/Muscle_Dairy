@@ -20,6 +20,8 @@
       <div class="user_nav col-xs-5 header-content">
         <div><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn header-right" %></div>
         <div><%= link_to "画像投稿", new_post_image_path, class: "btn btn-default navbar-btn header-right" %></div>
+        <div><%= link_to "タイムライン", post_images_path, class: "btn btn-default navbar-btn header-right" %></div>
+        <div><%= link_to "マイページ", user_path(current_user.id), class: "btn btn-default navbar-btn header-right" %></div>
       </div>
       <% else %>
       <div class="col-xs-5 header-content">

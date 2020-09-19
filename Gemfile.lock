@@ -61,6 +61,7 @@ GEM
     autoprefixer-rails (9.8.6.3)
       execjs
     bcrypt (3.1.16)
+    bcrypt_pbkdf (1.0.1)
     bindex (0.8.1)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
@@ -120,9 +121,12 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
+    ed25519 (1.2.4)
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1)
+    font-awesome-sass (5.4.1)
+      sassc (>= 1.11)
     fullcalendar-rails (3.9.0.0)
       jquery-rails (>= 4.0.5, < 5.0.0)
       jquery-ui-rails (>= 5.0.2)
@@ -310,6 +314,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt_pbkdf
   bootsnap (>= 1.1.0)
   bootstrap-sass (>= 3.4.1)
   byebug
@@ -322,6 +327,8 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
+  ed25519
+  font-awesome-sass (~> 5.4.1)
   fullcalendar-rails
   jbuilder (~> 2.5)
   jquery-rails (= 4.3.3)
