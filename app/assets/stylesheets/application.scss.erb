@@ -10,8 +10,8 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require fullcalendar
  *= require bxslider
  *= require_tree .
  */
@@ -49,7 +49,12 @@ footer {
   height: 120px;
 }
 
-.signup {
+.login {
+  background-image: url("<%= asset_path('image9.jpg') %>") !important;
+}
+
+.signup,
+.login {
   text-align: center;
   padding: 30px 35px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -65,7 +70,6 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     padding-bottom: 30px;
     font-size: 35px;
-    border-bottom: 1px solid #fff;
   }
 
   input {
@@ -83,6 +87,16 @@ footer {
   }
 }
 
+.signup__form,
+.login__form {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+}
+
+.login__form {
+  margin-top: 50px;
+}
+
 .signup__btn {
   width: 30%;
   padding: 12px;
@@ -90,4 +104,11 @@ footer {
   margin-bottom: 10px;
   font-size: 16px;
   color: white;
+}
+
+.header__logo img {
+  height: 80px;
+  width: 150px;
+  border-radius: 5px;
+  margin-left: 10px;
 }

@@ -14,6 +14,11 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery
+//= require jquery_ujs
+//= require moment
+//= require moment/ja.js
+//= require fullcalendar
+//= require fullcalendar/lang/ja
 //= require bootstrap-sprockets
-//= require_tree .
 //= require bxslider
+//= require_tree .

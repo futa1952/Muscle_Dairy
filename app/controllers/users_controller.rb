@@ -4,6 +4,12 @@ class UsersController < ApplicationController
     @post_images = @user.post_images
   end
 
+  # def event
+  #   @user = User.find(params[:id])
+  #   @calenders = Calender.where(user_id: @user.id)
+  #   @calender = Calender.new
+  # end
+
   def edit
     @user = User.find(params[:id])
   end

@@ -8,36 +8,21 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('.bxslider').bxSlider({
-        auto: true, // 自動スライド
-        speed: 1000, // スライドするスピード
-        moveSlides: 1, // 移動するスライド数
-        pause: 3000, // 自動スライドの待ち時間
-        maxSlides: 1, // 一度に表示させる最大数
-        randomStart: true, // 最初に表示するスライドをランダムに設定
-        autoHover: true, // ホバー時に自動スライドを停止
-        mode: 'fade'
-      });
-    });
-  </script>
 </head>
 
 <body>
   <header>
     <div class="header_bar row">
-      <h1 class="col-xs-7">
-        <%= link_to "Muscle_Dairy", root_path %>
-      </h1>
+      <span class="header__logo col-xs-7">
+        <%= link_to image_tag('logo.jpg'), root_path %><br>
+      </span>
       <% if user_signed_in? %>
       <div class="user_nav col-xs-5 header-content">
         <div><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn header-right" %></div>
         <div><%= link_to "画像投稿", new_post_image_path, class: "btn btn-default navbar-btn header-right" %></div>
         <div><%= link_to "タイムライン", post_images_path, class: "btn btn-default navbar-btn header-right" %></div>
         <div><%= link_to "マイページ", user_path(current_user.id), class: "btn btn-default navbar-btn header-right" %></div>
+        <div><%= link_to "カレンダー", calenders_path, class: "btn btn-default navbar-btn header-right" %></div>
       </div>
       <% else %>
       <div class="col-xs-5 header-content">
@@ -53,9 +38,29 @@
 
   <footer>
     <p>(c)copy right</p>
+    <p>Logo made by <a href="https://www.designevo.com/logo-maker/" title="Free Online Logo Maker">DesignEvo free logo creator</a></div>
   </footer>
 
 
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src='/js/fullcalendar/lib/moment.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.js'></script>
+<script>
+  $(document).ready(function() {
+    $('.bxslider').bxSlider({
+      auto: true, // 自動スライド
+      speed: 1000, // スライドするスピード
+      moveSlides: 1, // 移動するスライド数
+      pause: 3000, // 自動スライドの待ち時間
+      maxSlides: 1, // 一度に表示させる最大数
+      randomStart: true, // 最初に表示するスライドをランダムに設定
+      autoHover: true, // ホバー時に自動スライドを停止
+      mode: 'fade'
+    });
+  });
+</script>
 
 </html>
