@@ -11,3 +11,63 @@
 .header-right {
   margin-right: 20px;
 }
+
+.about__main {
+  position: relative;
+  height: 600px;
+  margin-top: 80px;
+
+  img {
+    width: 70%;
+    height: 600px;
+    object-fit: cover;
+    margin-left: 30%;
+  }
+
+  h2 {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 4rem;
+    padding: 25px;
+    font-weight: bold;
+  }
+}
+
+.bg1 {
+  background: #e8e7e7;
+  height: 800px;
+  width: 45%;
+  position: absolute;
+  top: -18%;
+  left: 0;
+  z-index: -1;
+}
+
+.about__greeting {
+  margin-top: 90px;
+  text-align: center;
+}
+
+.about__greeting .about__contents {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+
+  img {
+    width: 50%;
+    height: 600px;
+  }
+}
+
+.about__greeting .about__content {
+  width: 48%;
+}
+
+.bxslider img{
+  width: 100% !important;
+  height: 600px !important;
+}

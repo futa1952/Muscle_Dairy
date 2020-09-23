@@ -12,11 +12,16 @@
  *
  *= require_tree .
  *= require_self
+ *= require bxslider
+ *= require_tree .
  */
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+
 
 body {
   min-height: 100vh;
@@ -24,6 +29,11 @@ body {
   padding-bottom: 120px;
   box-sizing: border-box;
 }
+
+ul {
+  list-style: none;
+}
+
 header {
   background-color: gray;
 }
@@ -36,8 +46,48 @@ footer {
   padding: 30px 0;
   position: absolute;
   bottom: 0;
+  height: 120px;
 }
-img {
-  width: 200px;
-  height: 200px;
+
+.signup {
+  text-align: center;
+  padding: 30px 35px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  background-image: url("<%= asset_path('image2.jpg') %>");
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  height: 700px;
+
+  h2 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 30px;
+    font-size: 35px;
+    border-bottom: 1px solid #fff;
+  }
+
+  input {
+    width: 30%;
+    margin: 10px;
+    padding-top: 10px;
+  }
+
+  label {
+    font-size: 18px;
+  }
+
+  span {
+    color: #fff;
+  }
+}
+
+.signup__btn {
+  width: 30%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: white;
 }

@@ -75,6 +75,7 @@ gem 'pry-rails'
 gem 'jquery-rails', '4.3.3'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+gem 'bxslider-rails'
 
 gem 'dotenv-rails'
 group :production do
