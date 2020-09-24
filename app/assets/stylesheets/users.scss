@@ -1,3 +1,30 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-page__top-info {
+  display: flex;
+  border: double 4px #333;
+
+  h2 {
+    margin-left: 30px;
+  }
+}
+
+user-page__table {
+  width: 300px;
+  td {
+    width: 50px;
+  }
+
+  th {
+    width: 50px;
+  }
+}
+
+.user-edit__form-group label {
+  margin-top: 20px;
+}
+.user-edit__image label {
+  margin-top: 20px;
+}

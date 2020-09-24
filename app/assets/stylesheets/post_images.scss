@@ -2,11 +2,64 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .profile-img {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
 }
 
 .post_image {
-  width: 200px;
-  height: 200px;
+  width: 570px;
+  height: 50%;
+  border: solid 2px #333;
+}
+
+.timeline {
+  width: 100%;
+  text-align: center;
+}
+
+.timeline__top-info {
+  height: 80px;
+  width: 570px;
+  display: flex;
+  margin: 0 auto;
+  border: double 4px #333;
+  margin-top: 20px;
+}
+.timeline__name {
+  margin-left: 30px;
+  h2 {
+    font-size: 25px;
+  }
+}
+
+.timeline__main-image {
+  text-align: center;
+}
+
+.timeline__info {
+  width: 570px;
+  margin: 0 auto;
+
+  h3 {
+    text-align: left;
+    border : solid 1px #b3b3b3 ;
+    border-top : solid 1px #e0e0e0 ;
+    border-bottom : solid 1px #717171 ;
+    background: #f1f1f1 ;
+    padding: 15px;
+    margin: 0;
+  }
+
+  p {
+    text-align: left;
+    border: solid 2px #333;
+    height: 50px;
+  }
+
+  ul {
+    text-align: left;
+    padding: 0;
+    margin-bottom: 60px;
+  }
+
 }

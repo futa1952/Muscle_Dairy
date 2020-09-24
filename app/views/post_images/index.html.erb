@@ -1,39 +1,37 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-8 col-sm-offset-2">
-      <div class="masonry-wrapper-cols">
-        <div class="masonry-gutter"></div>
-        <% @post_images.each do |post_image| %>
-        <div class="masonry-block">
-          <div class="block block-image v1">
-            <div class="block-image">
-              <div class="view view-first">
-                <%= link_to post_image_path(post_image.id) do %>
-                <%= attachment_image_tag post_image, :image %>
-                <% end %>
-              </div>
-            </div>
-            <div class="block-content">
-              <%= attachment_image_tag post_image.user, :profile_image, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg", size: "30×30" %>
-              <h3 class="block-title">
-                <%= link_to post_image_path(post_image.id) do %>
-                <%= post_image.menu %>
-                <% end %>
-              </h3>
-              <p><%= post_image.title %></p>
-              <ul class="inline-meta">
-                <li>By
-                  <%= post_image.user.name %>
-                </li>
-                <li>
-                  <%= link_to "#{post_image.post_comments.count} コメント", post_image_path(post_image.id) %>
-                </li>
-              </ul>
-            </div>
+    <div class="col-xs-12">
+      <% @post_images.each do |post_image| %>
+      <div class="timeline">
+        <div class="timeline__top-info">
+          <div class="timeline__profile-image">
+            <%= attachment_image_tag post_image.user, :profile_image, format: 'jpeg', class: "img-circle profile-img", fallback: "no_image.jpg", size: "30×30" %>
+          </div>
+          <div class="timeline__name">
+            <h2><%= post_image.user.name %></h2>
           </div>
         </div>
-        <% end %>
+
+        <div class="timeline__main-image">
+          <%= link_to post_image_path(post_image.id) do %>
+          <%= attachment_image_tag post_image, :image %>
+          <% end %>
+        </div>
+        <div class="timeline__info">
+          <h3 class="timeline__menu">
+            <%= link_to post_image_path(post_image.id) do %>
+            <%= post_image.title %>
+            <% end %>
+          </h3>
+          <p class="timeline__title"><%= post_image.menu %></p>
+          <ul class="timeline__comment">
+            <li>
+              <%= link_to "#{post_image.post_comments.count} 件コメントをすべて見る", post_image_path(post_image.id) %>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+    <% end %>
   </div>
 </div>
