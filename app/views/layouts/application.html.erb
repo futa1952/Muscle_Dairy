@@ -14,7 +14,7 @@
   <header>
     <div class="header_bar row">
       <span class="header__logo col-xs-7">
-        <%= link_to image_tag('logo.jpg'), root_path %><br>
+        <%= link_to image_tag('Muscle-Dairy.png'), root_path %><br>
       </span>
       <% if user_signed_in? %>
       <div class="user_nav col-xs-5 header-content">
@@ -52,9 +52,9 @@
   $(document).ready(function() {
     $('.bxslider').bxSlider({
       auto: true, // 自動スライド
-      speed: 1000, // スライドするスピード
-      moveSlides: 1, // 移動するスライド数
-      pause: 3000, // 自動スライドの待ち時間
+      speed: 1500, // スライドするスピード
+      moveSlides: 3, // 移動するスライド数
+      pause: 2500, // 自動スライドの待ち時間
       maxSlides: 1, // 一度に表示させる最大数
       randomStart: true, // 最初に表示するスライドをランダムに設定
       autoHover: true, // ホバー時に自動スライドを停止
