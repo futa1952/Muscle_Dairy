@@ -63,3 +63,70 @@
   }
 
 }
+
+.mypage {
+  text-align: center;
+  width: 100%;
+}
+
+.mypage__info-content {
+  display: flex;
+  justify-content: space-evenly;
+  width: 570px;
+  margin: 0 auto;
+  padding: 0;
+
+
+  li {
+    margin: 0 15px;
+    font-size: 20px;
+
+  }
+}
+
+.mypage__top-info {
+  height: 80px;
+  width: 570px;
+  display: flex;
+  margin: 0 auto;
+  border: double 4px #333;
+  margin-top: 20px;
+
+  h2 {
+    margin-left: 30px;
+  }
+}
+
+.mypage__bottom-info {
+  display: flex;
+  justify-content: space-evenly;
+  width: 570px;
+  margin: 0 auto;
+  border: solid #717171;
+  border-width: 0 2px 2px 2px;
+}
+
+.mypage__btn {
+  text-align: right;
+  width: 570px;
+  margin: 0 auto;
+}
+
+.mypage__menu {
+  margin: 0 auto;
+  width: 570px;
+  height: 200px;
+  border: solid 2px #b3b3b3;
+  background-color: beige;
+}
+
+.mypage__comment-content {
+  padding: 8px 19px;
+  margin: 2em 0;
+  color: #2c2c2f;
+  background: #cde4ff;
+  border-top: solid 5px #5989cf;
+  border-bottom: solid 5px #5989cf;
+  width: 600px;
+  margin: 20px auto;
+}
