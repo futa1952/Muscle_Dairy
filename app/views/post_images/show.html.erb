@@ -63,7 +63,7 @@
               <%= image_tag('no_image.jpg', style: "width: 60px; height: 60px;") %>
             </div>
             <div class="mypage__comment-text">
-              <a href="#"><%= post_comment.user.name %></a>
+              <%= post_comment.user.name %>
               <div class="mypage__comment-meta">
                 <span><%= post_comment.created_at.strftime('%Y/%m/%d') %></span>
               </div>

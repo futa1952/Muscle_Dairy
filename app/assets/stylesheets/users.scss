@@ -28,3 +28,25 @@ user-page__table {
 .user-edit__image label {
   margin-top: 20px;
 }
+
+.user-page__my-images {
+  display: flex;
+  justify-content: space-space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.user-page__image-box img {
+  width: 32% !important;
+  height: 300px;
+  margin: 10px 10px 10px 0;
+
+}
+
+.user-page__image-box a:hover {
+  opacity:0.6;
+  filter: alpha(opacity=60);
+  -ms-filter: "alpha( opacity=60 )";
+  background: #fff;
+}

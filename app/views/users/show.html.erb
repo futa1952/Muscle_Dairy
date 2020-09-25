@@ -25,6 +25,15 @@
               <td><%= @user.email %></td>
             </tr>
           </table>
+          <div class="user-page__my-image">
+            <div class="user-page__image-box">
+              <% @user.posts.each do |postImage| %>
+              <%= link_to post_image_path(postImage.id) do %>
+              <%= attachment_image_tag postImage , :image %>
+              <% end %>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
