@@ -73,6 +73,7 @@ gem 'kaminari', '~> 1.2.1'
 gem 'pry-rails'
 
 gem 'jquery-rails', '4.3.3'
+gem 'therubyracer'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 gem 'bxslider-rails'

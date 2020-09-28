@@ -8,6 +8,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.css">
 </head>
 
 <body>
@@ -22,7 +24,7 @@
         <div><%= link_to "画像投稿", new_post_image_path, class: "btn btn-default navbar-btn header-right" %></div>
         <div><%= link_to "タイムライン", post_images_path, class: "btn btn-default navbar-btn header-right" %></div>
         <div><%= link_to "マイページ", user_path(current_user.id), class: "btn btn-default navbar-btn header-right" %></div>
-        <div><%= link_to "カレンダー", calenders_path, class: "btn btn-default navbar-btn header-right" %></div>
+        <div><%= link_to "カレンダー", calenders_path(current_user.id), class: "btn btn-default navbar-btn header-right" %></div>
       </div>
       <% else %>
       <div class="col-xs-5 header-content">
@@ -45,7 +47,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script src='/js/fullcalendar/lib/moment.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.2/main.min.js'></script>
+<script src=' http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.js'></script>
 <script>
   $(document).ready(function() {
     $('.bxslider').bxSlider({
