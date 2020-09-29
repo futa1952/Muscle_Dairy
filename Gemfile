@@ -71,11 +71,10 @@ gem "refile-mini_magick"
 gem 'bootstrap-sass', ">= 3.4.1"
 gem 'kaminari', '~> 1.2.1'
 gem 'pry-rails'
-
 gem 'jquery-rails', '4.3.3'
 gem 'therubyracer'
 gem 'fullcalendar-rails'
-gem 'momentjs-rails'
+gem 'momentjs-rails', '>= 2.9.0'
 gem 'bxslider-rails'
 
 gem 'dotenv-rails'

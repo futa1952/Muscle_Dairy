@@ -79,12 +79,12 @@
     },
 
     // event クリックで編集、削除
-    eventClick: function(event, jsEvent, view) {
+    eventClick: function(calender, jsEvent, view) {
       jsEvent.preventDefault();
-      $(`#inputScheduleEditForm${event.id}`).modal('show');
+      $(`#inputScheduleEditForm${calender.id}`).modal('show');
     },
 
-    eventMouseover: function(event, jsEvent, view) {
+    eventMouseover: function(calender, jsEvent, view) {
       jsEvent.preventDefault();
     }
   })
@@ -96,9 +96,9 @@
 
     // 外部イベントを初期化します
     // -----------------------------------------------------------------
-    $('#external-events .fc-event').each(function() {
+    $('#external-calenders .fc-event').each(function() {
       // カレンダーがドロップ時にイベントをレンダリングできるようにデータを保存します
-      $(this).data('event', {
+      $(this).data('calender', {
         title: $.trim($(this).text()), // イベントタイトルとして要素のテキストを使用
         stick: true //ユーザがナビゲートする時に維持する(renderEventメソッドのドキュメントを参照)
       });
