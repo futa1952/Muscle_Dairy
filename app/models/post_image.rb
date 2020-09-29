@@ -1,4 +1,5 @@
 class PostImage < ApplicationRecord
+  default_scope -> { order(created_at: :desc) }
   belongs_to :user
   attachment :image
   has_many :post_comments, dependent: :destroy
@@ -9,5 +10,10 @@ class PostImage < ApplicationRecord
 
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?
+  end
+
+  private
+  def post_image_params
+    params.require(:post_image).permit(:image)
   end
 end

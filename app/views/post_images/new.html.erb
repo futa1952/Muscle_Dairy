@@ -20,7 +20,10 @@
     <% end %>
     <div class="row">
       <div class="col-xs-12">
-        <%= f.attachment_field :image %>
+        <div class="item-image">
+          <%= attachment_image_tag @post_image , :image, class: "img-square view-image", fallback: "no_image.jpg" %>
+        </div>
+        <%= f.attachment_field :image, placeholder:"画像" %>
       </div>
     </div>
     <div class="row">
@@ -34,3 +37,17 @@
     <% end %>
   </div>
 </div>
+<script>
+  $(function() {
+    // inputのidから情報の取得
+    $('#post_image_image').on('change', function(e) {
+      // ここから既存の画像のurlの取得
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        $(".view-image").attr('src', e.target.result);
+      }
+      // ここまで
+      reader.readAsDataURL(e.target.files[0]); //取得したurlにアップロード画像のurlを挿入
+    });
+  });
+</script>
