@@ -1,5 +1,6 @@
-json.array! @can_re do |re|
-  json.title       re[:title]
-  json.start       re[:start].strftime("20%y-%m-%d")
-  json.className   re[:class_name]
+json.array!(@calenders) do |calender|
+  json.extract! calender, :id, :title, :body
+  json.start calender.start
+  json.end calender.end
+  json.url calender_url(calender, format: :html)
 end

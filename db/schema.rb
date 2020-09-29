@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 2020_09_10_062502) do
     t.boolean "disp_flg"
     t.datetime "start"
     t.datetime "end"
-    t.string "allDay", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -7,7 +7,6 @@ class CreateCalenders < ActiveRecord::Migration[5.2]
       t.boolean :disp_flg
       t.datetime :start
       t.datetime :end
-      t.string :allDay, null: false
 
       t.timestamps
     end
